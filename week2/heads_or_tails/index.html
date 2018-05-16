@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ashley Heads Or Tails</title>
+  </head>
+  <body>
+    <h2>Heads Or Tails</h2>
+    <button type="button" id="heads" name="button">Heads</button>
+    <button type="button" id="tails" name="button">Tails</button>
+    <p id="results"></p>
+
+    <script type="text/javascript">
+
+      document.getElementById('heads').onclick = pressHeads;
+      document.getElementById('tails').onclick = pressTails;
+
+      function pressHeads(){
+        let coinflip = Math.random();
+        if (coinflip >= .5) {
+          document.getElementById('results').innerHTML = "Tails won, You Lost!";
+        } else {
+          document.getElementById('results').innerHTML = "Tails Lost, You Won!";
+        }
+      }
+
+      function pressTails(){
+        let coinflip = Math.random();
+        if (coinflip < .5) {
+          document.getElementById('results').innerHTML = "Heads won, You Lost!";
+        } else {
+          document.getElementById('results').innerHTML = "Heads Lost, You Won!";
+        }
+      }
+
+    </script>
+
+  </body>
+</html>

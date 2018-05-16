@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Result</h1>
+    <button id="heads" type="button" name="button">Heads</button>
+    <button id="tails" type="button" name="button">Tails</button>
+  <script type="text/javascript">
+  function hFlip(){
+    let odds = Math.random()
+    if(odds<.5){
+      document.getElementsByTagName("h1")[0].innerHTML = "Heads, you win!"
+    }else{
+      document.getElementsByTagName("h1")[0].innerHTML = "Tails, you lose!"
+    }
+
+  }
+  function tFlip(){
+    let odds = Math.random()
+    if(odds<.5){
+      document.getElementsByTagName("h1")[0].innerHTML = "Heads, you lose!"
+    }else{
+      document.getElementsByTagName("h1")[0].innerHTML = "Tails, you win!"
+    }
+  }
+  document.getElementById("heads").onclick = hFlip
+  document.getElementById("tails").onclick = tFlip
+
+  </script>
+  </body>
+</html>
